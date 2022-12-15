@@ -46,31 +46,43 @@ nav{
 }
 
 nav .container{
-   display: flex;
+    display: flex;
     justify-content: space-between;
   
-    align-items: center;
-}
+    align-items: center; 
+} 
 .logo img{
     width: 180px;
     padding: 20px 0px;
 }
 .navlinks{
-    /* width: 600px;
-   margin-left: 40px;
-   text-align: end; */
-}
+     /* width: 600px; */
+   /* margin-left: 40px; */
+  
+} 
+
 .navlinks ul{
     display: flex;
     /* justify-content: center; */
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 30px;
 
 }
 .navlinks ul li{
     list-style: none;
     font-size: 1.2rem;
+}
+.hamburger-icon{
+    height: 30px;
+    width: 30px;
+    display: none;
+   
+    
+}
+.hamburger-icon img{
+    width: 100%;
+    
 }
 
         /* hero section  */
@@ -399,6 +411,32 @@ footer{
 @media screen and (max-width:991px){ 
     .navlinks{
         /* display: none; */
+        position: absolute;
+        background-color: #fff;
+       left: -100%;
+       top: 100%;
+       width: 100%;
+       padding-top: 20px;
+       padding-bottom: 50px;
+       transition: 0.3s ease-out;
+    }
+
+    .active{
+        left: 0px;
+        /* transition: 0.2s ease-out; */
+    }
+    
+    .navlinks ul{
+        flex-direction: column;
+    }
+   
+    .main-nav{
+        overflow: initial;
+        position: relative;
+       
+    }
+    .hamburger-icon{
+        display: initial;
     }
 
     

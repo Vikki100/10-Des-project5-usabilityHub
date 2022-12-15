@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clone usablilityhub</title>
     <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
     <section class="banner">
@@ -17,11 +18,11 @@
     <!-- navbar -->
 
     <nav>
-        <div class="container">
+        <div class="container main-nav">
             <div class="logo">
                 <img src="./assets/asset 1.png" alt="">
             </div>
-            <div class="navlinks">
+            <div class="navlinks " id="nav-link">
                 <ul>
                     <li>Product</li>
                     <li>Costmer</li>
@@ -31,6 +32,9 @@
                     <li class="borderbtn borderbtn2"  >Sing Up</li>
                 </ul>
             </div>
+           
+           <a href="#" class="hamburger-icon"  id="toggle-link"><img src="./assets/more.png" alt="" ></a>
+          
         </div>
     </nav>
 
@@ -314,7 +318,24 @@
 
     
     
-    
+    <!-- <script>
+         const togglebtn = document.getElementById('toggle-link');
+         const navmeu = Document.getElementById('nav-link');
+         togglebtn.addEventListener('click' , ()=>{
+            navmeu.classlist.toggle('active');    
+            console.log('cliked')        
+          });
+    </script> -->
+    <script>
+        const navmeu = document.getElementById('nav-link');
+        const clickbtn = document.getElementById('toggle-link')
+        clickbtn.addEventListener('click', ()=>{
+            // console.log('cliked')
+            navmeu.classList.toggle('active');
+        }
+        )
+    </script>
+
 
 </body>
 </html>
